@@ -1,0 +1,8 @@
+device_tracker:
+  - platform: iphonedetect
+    consider_home: 60
+    new_device_defaults:
+      track_new_devices: true
+    hosts:
+      amandas_iphone: 192.168.4.228
+      zeevs_iphone: 192.168.4.139

@@ -1,0 +1,54 @@
+background: var(--background-image)
+title: "10 Parker Street"
+resources:
+  - url: /hacsfiles/kiosk-mode/kiosk-mode.js
+    type: module
+views:
+  - path: tablet
+    title: Tablet
+    cards:
+      - type: entities
+        entities:
+          - switch.desk_lamp
+        title: Lights
+  - path: default_view
+    title: Home
+    cards:
+      - type: entities
+        title: Theme
+        entities:
+          - input_select.theme
+          - input_boolean.theme_alternative
+          - input_boolean.dark_mode 
+      - type: media-control
+        entity: media_player.kitchen
+      - type: picture-entity
+        entity: camera.nigel_cleaning_map
+      - type: entities
+        entities:
+          - sensor.rbr20_rx
+          - sensor.rbr20_tx
+          - sensor.chromecast_rx
+          - sensor.chromecast_tx
+          - sensor.sonoszp_rx_2
+          - sensor.sonoszp_tx_2
+          - sensor.rbr20_uptime
+          - sensor.chromecast_uptime
+          - sensor.sonoszp_uptime_2
+        title: Living Room
+      - type: media-control
+        entity: media_player.living_room
+      - type: entities
+        entities:
+          - sensor.rbs20_rx
+          - sensor.rbs20_tx
+          - sensor.rbs20_uptime
+        title: Office
+      - type: entities
+        entities:
+          - switch.desk_lamp
+        title: Switch
+      - type: weather-forecast
+        entity: weather.10_parker
+        show_forecast: false
+
